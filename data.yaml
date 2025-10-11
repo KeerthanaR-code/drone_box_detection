@@ -1,0 +1,13 @@
+names:
+- boxes
+- plastic_box
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: my-first-project-ue5fk
+  url: https://universe.roboflow.com/mydataset1/my-first-project-ue5fk/dataset/3
+  version: 3
+  workspace: mydataset1
+test: ../test/images
+train: ../train/images
+val: ../valid/images
