@@ -69,11 +69,25 @@ sim_vehicle.py -v ArduCopter -f gazebo-iris --console --map
 
 ## 2️⃣ Launch Gazebo with box model
 ```bash
-gz sim ~/ardupilot_gazebo/worlds/iris_arducopter_runway.sdf
+gz sim -v4 -r ~/ardupilot_gazebo/worlds/iris_runway.sdf
+```
+
+## Start ROS-GZ bridge for camera data
+```bash
+source /opt/ros/humble/setup.bash
+
+source ~install/setup.bash
+
+ros2 run ros_gz_image image_bridge \
+"/world/iris_runway/model/iris_with_gimbal/model/gimbal/link/pitch_link/sensor/camera/image"
 ```
 
 ## 3️⃣ Run the Python script
 ```bash
+source /opt/ros/humble/setup.bash
+
+source ~install/setup.bash
+
 python3 Ardupilot_Gazebo_SITL.py
 ```
 
